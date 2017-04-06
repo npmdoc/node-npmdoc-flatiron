@@ -1,0 +1,3019 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/flatiron/flatiron"
+
+    >flatiron (v0.4.3)</a>
+</h1>
+<h4>An elegant blend of convention and configuration for building apps in Node.js and the browser</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.flatiron">module flatiron</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.App">
+            function <span class="apidocSignatureSpan">flatiron.</span>App
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.App.super_">
+            function <span class="apidocSignatureSpan">flatiron.</span>App.super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.createApp">
+            function <span class="apidocSignatureSpan">flatiron.</span>createApp
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">flatiron.</span>App.super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">flatiron.</span>App.super_.super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">flatiron.</span>common</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">flatiron.</span>common.directories</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">flatiron.</span>constants</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">flatiron.</span>formats</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">flatiron.</span>plugins</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">flatiron.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.flatiron.App">module flatiron.App</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.App.App">
+            function <span class="apidocSignatureSpan">flatiron.</span>App
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.App.super_">
+            function <span class="apidocSignatureSpan">flatiron.App.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.flatiron.App.super_">module flatiron.App.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.App.super_.super_">
+            function <span class="apidocSignatureSpan">flatiron.App.</span>super_
+            <span class="apidocSignatureSpan">(conf)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.flatiron.App.super_.prototype">module flatiron.App.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.App.super_.prototype.init">
+            function <span class="apidocSignatureSpan">flatiron.App.super_.prototype.</span>init
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.App.super_.prototype.inspect">
+            function <span class="apidocSignatureSpan">flatiron.App.super_.prototype.</span>inspect
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.App.super_.prototype.remove">
+            function <span class="apidocSignatureSpan">flatiron.App.super_.prototype.</span>remove
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.App.super_.prototype.use">
+            function <span class="apidocSignatureSpan">flatiron.App.super_.prototype.</span>use
+            <span class="apidocSignatureSpan">(plugin, options, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.flatiron.App.super_.super_.prototype">module flatiron.App.super_.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.App.super_.super_.prototype.addListener">
+            function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>addListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.App.super_.super_.prototype.emit">
+            function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>emit
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.App.super_.super_.prototype.listeners">
+            function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>listeners
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.App.super_.super_.prototype.listenersAny">
+            function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>listenersAny
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.App.super_.super_.prototype.many">
+            function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>many
+            <span class="apidocSignatureSpan">(event, ttl, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.App.super_.super_.prototype.off">
+            function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>off
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.App.super_.super_.prototype.offAny">
+            function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>offAny
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.App.super_.super_.prototype.on">
+            function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>on
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.App.super_.super_.prototype.onAny">
+            function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>onAny
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.App.super_.super_.prototype.once">
+            function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>once
+            <span class="apidocSignatureSpan">(event, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.App.super_.super_.prototype.removeAllListeners">
+            function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>removeAllListeners
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.App.super_.super_.prototype.removeListener">
+            function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>removeListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.App.super_.super_.prototype.setMaxListeners">
+            function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>setMaxListeners
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>delimiter</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>event</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.flatiron.common">module flatiron.common</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common._errnoException">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>_errnoException
+            <span class="apidocSignatureSpan">(err, syscall, original)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common._exceptionWithHostPort">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>_exceptionWithHostPort
+            <span class="apidocSignatureSpan">(err, syscall, address, port, additional)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common._extend">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>_extend
+            <span class="apidocSignatureSpan">(target, source)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.camelToUnderscore">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>camelToUnderscore
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.capitalize">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>capitalize
+            <span class="apidocSignatureSpan">(lower_case_and_underscored_word, first_letter_in_uppercase)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.clone">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>clone
+            <span class="apidocSignatureSpan">(object, filter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.createPath">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>createPath
+            <span class="apidocSignatureSpan">(obj, path, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.debug">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>debug
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.debuglog">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>debuglog
+            <span class="apidocSignatureSpan">(set)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.deprecate">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>deprecate
+            <span class="apidocSignatureSpan">(fn, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.each">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>each
+            <span class="apidocSignatureSpan">(obj, iterator)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.error">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>error
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.escapeRegExp">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>escapeRegExp
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.filter">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>filter
+            <span class="apidocSignatureSpan">(obj, pred)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.find">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>find
+            <span class="apidocSignatureSpan">(obj, pred)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.inherits">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>inherits
+            <span class="apidocSignatureSpan">(ctor, superCtor)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.inspect">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>inspect
+            <span class="apidocSignatureSpan">(obj, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.isArray">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>isArray
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.isBoolean">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>isBoolean
+            <span class="apidocSignatureSpan">(arg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.isBuffer">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>isBuffer
+            <span class="apidocSignatureSpan">(b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.isDate">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>isDate
+            <span class="apidocSignatureSpan">(d)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.isError">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>isError
+            <span class="apidocSignatureSpan">(e)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.isFunction">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>isFunction
+            <span class="apidocSignatureSpan">(arg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.isNull">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>isNull
+            <span class="apidocSignatureSpan">(arg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.isNullOrUndefined">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>isNullOrUndefined
+            <span class="apidocSignatureSpan">(arg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.isNumber">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>isNumber
+            <span class="apidocSignatureSpan">(arg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.isObject">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>isObject
+            <span class="apidocSignatureSpan">(arg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.isPrimitive">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>isPrimitive
+            <span class="apidocSignatureSpan">(arg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.isRegExp">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>isRegExp
+            <span class="apidocSignatureSpan">(re)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.isString">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>isString
+            <span class="apidocSignatureSpan">(arg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.isSymbol">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>isSymbol
+            <span class="apidocSignatureSpan">(arg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.isUndefined">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>isUndefined
+            <span class="apidocSignatureSpan">(arg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.log">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>log
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.mixin">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>mixin
+            <span class="apidocSignatureSpan">(target)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.pad">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>pad
+            <span class="apidocSignatureSpan">(str, len, chr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.path">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>path
+            <span class="apidocSignatureSpan">(obj, path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.print">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>print
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.puts">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>puts
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.randomString">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>randomString
+            <span class="apidocSignatureSpan">(length)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.rargs">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>rargs
+            <span class="apidocSignatureSpan">(_args, slice)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.requireDir">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>requireDir
+            <span class="apidocSignatureSpan">(directory)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.requireDirLazy">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>requireDirLazy
+            <span class="apidocSignatureSpan">(directory)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.templateUsage">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>templateUsage
+            <span class="apidocSignatureSpan">(app, commands)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.tryReaddirSync">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>tryReaddirSync
+            <span class="apidocSignatureSpan">(dir)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.underscoreToCamel">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>underscoreToCamel
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.uuid">
+            function <span class="apidocSignatureSpan">flatiron.common.</span>uuid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">flatiron.common.</span>directories</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.flatiron.common.directories">module flatiron.common.directories</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.directories.create">
+            function <span class="apidocSignatureSpan">flatiron.common.directories.</span>create
+            <span class="apidocSignatureSpan">(dirs, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.directories.normalize">
+            function <span class="apidocSignatureSpan">flatiron.common.directories.</span>normalize
+            <span class="apidocSignatureSpan">(keys, dirs)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.common.directories.remove">
+            function <span class="apidocSignatureSpan">flatiron.common.directories.</span>remove
+            <span class="apidocSignatureSpan">(dirs, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.flatiron" id="apidoc.module.flatiron">module flatiron</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.App" id="apidoc.element.flatiron.App">
+        function <span class="apidocSignatureSpan">flatiron.</span>App
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">App = function (options) {
+  broadway.App.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.App.super_" id="apidoc.element.flatiron.App.super_">
+        function <span class="apidocSignatureSpan">flatiron.</span>App.super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">App.super_ = function (options) {
+  //
+  // Setup options and `App` constants.
+  //
+  options        = options || {};
+  this.root      = options.root;
+  this.delimiter = options.delimiter || &#x27;::&#x27;;
+
+  //
+  // Inherit from `EventEmitter2`
+  //
+  events.EventEmitter2.call(this, {
+    delimiter: this.delimiter,
+    wildcard: true
+  });
+
+  //
+  // Setup other relevant options such as the plugins
+  // for this instance.
+  //
+  this.options      = options;
+  this.env          = options.env || process.env[&#x27;NODE_ENV&#x27;] || &#x27;development&#x27;
+  this.plugins      = options.plugins || {};
+  this.initialized  = false;
+  this.bootstrapper = options.bootstrapper || bootstrapper;
+  this.initializers = {};
+  this.initlist     = [];
+
+  //
+  // Bootstrap this instance
+  //
+  this.bootstrapper.bootstrap(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.createApp" id="apidoc.element.flatiron.createApp">
+        function <span class="apidocSignatureSpan">flatiron.</span>createApp
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createApp = function (options) {
+  return new flatiron.App(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.flatiron.App" id="apidoc.module.flatiron.App">module flatiron.App</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.App.App" id="apidoc.element.flatiron.App.App">
+        function <span class="apidocSignatureSpan">flatiron.</span>App
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">App = function (options) {
+  broadway.App.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.App.super_" id="apidoc.element.flatiron.App.super_">
+        function <span class="apidocSignatureSpan">flatiron.App.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">super_ = function (options) {
+  //
+  // Setup options and `App` constants.
+  //
+  options        = options || {};
+  this.root      = options.root;
+  this.delimiter = options.delimiter || &#x27;::&#x27;;
+
+  //
+  // Inherit from `EventEmitter2`
+  //
+  events.EventEmitter2.call(this, {
+    delimiter: this.delimiter,
+    wildcard: true
+  });
+
+  //
+  // Setup other relevant options such as the plugins
+  // for this instance.
+  //
+  this.options      = options;
+  this.env          = options.env || process.env[&#x27;NODE_ENV&#x27;] || &#x27;development&#x27;
+  this.plugins      = options.plugins || {};
+  this.initialized  = false;
+  this.bootstrapper = options.bootstrapper || bootstrapper;
+  this.initializers = {};
+  this.initlist     = [];
+
+  //
+  // Bootstrap this instance
+  //
+  this.bootstrapper.bootstrap(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.flatiron.App.super_" id="apidoc.module.flatiron.App.super_">module flatiron.App.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.App.super_.super_" id="apidoc.element.flatiron.App.super_.super_">
+        function <span class="apidocSignatureSpan">flatiron.App.</span>super_
+        <span class="apidocSignatureSpan">(conf)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter(conf) {
+  this._events = {};
+  this.newListener = false;
+  configure.call(this, conf);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.flatiron.App.super_.prototype" id="apidoc.module.flatiron.App.super_.prototype">module flatiron.App.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.App.super_.prototype.init" id="apidoc.element.flatiron.App.super_.prototype.init">
+        function <span class="apidocSignatureSpan">flatiron.App.super_.prototype.</span>init
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (options, callback) {
+  if (!callback &#x26;&#x26; typeof options === &#x27;function&#x27;) {
+    callback = options;
+    options = {};
+  }
+
+  if (this.initialized) {
+    return callback();
+  }
+
+  var self = this;
+  options = options   || {};
+  callback = callback || function () {};
+  this.env = options.env || this.env;
+  this.options = common.mixin({}, this.options, options);
+
+  function onComplete() {
+    self.initialized = true;
+    self.emit(&#x27;init&#x27;);
+    callback();
+  }
+
+  function ensureFeatures (err) {
+    return err
+      ? onError(err)
+      : features.ensure(this, onComplete);
+  }
+
+  function initPlugin(plugin, next) {
+    if (typeof self.initializers[plugin] === &#x27;function&#x27;) {
+      return self.initializers[plugin].call(self, function (err) {
+        if (err) {
+          return next(err);
+        }
+
+        self.emit([&#x27;plugin&#x27;, plugin, &#x27;init&#x27;]);
+        self.initializers[plugin] = true;
+        next();
+      });
+    }
+
+    next();
+  }
+
+  function initPlugins() {
+    async.forEach(self.initlist, initPlugin, ensureFeatures);
+  }
+
+  //
+  // Emit and respond with any errors that may short
+  // circuit the process.
+  //
+  function onError(err) {
+    self.emit([&#x27;error&#x27;, &#x27;init&#x27;], err);
+    callback(err);
+  }
+
+  //
+  // Run the bootstrapper, initialize plugins, and
+  // ensure features for this instance.
+  //
+  this.bootstrapper.init(this, initPlugins);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.App.super_.prototype.inspect" id="apidoc.element.flatiron.App.super_.prototype.inspect">
+        function <span class="apidocSignatureSpan">flatiron.App.super_.prototype.</span>inspect
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inspect = function () {
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.res.end(&#x27;Hello world!\n&#x27;);
+});
+
+// POST to /
+app.router.post(&#x27;/&#x27;, function () {
+this.res.writeHead(200, { &#x27;Content-Type&#x27;: &#x27;text/plain&#x27; });
+this.res.write(&#x27;Hey, you posted some cool data!\n&#x27;);
+this.res.end(util.<span class="apidocCodeKeywordSpan">inspect</span>(this.req.body, true, 2, true) + &#x27;\n&#x27;);
+});
+
+// Parameterized routes
+app.router.get(&#x27;/sandwich/:type&#x27;, function (type) {
+if (~[&#x27;bacon&#x27;, &#x27;burger&#x27;].indexOf(type)) {
+  this.res.writeHead(200, { &#x27;Content-Type&#x27;: &#x27;text/plain&#x27; });
+  this.res.end(&#x27;Serving &#x27; + type + &#x27; sandwich!\n&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.App.super_.prototype.remove" id="apidoc.element.flatiron.App.super_.prototype.remove">
+        function <span class="apidocSignatureSpan">flatiron.App.super_.prototype.</span>remove
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">remove = function (name) {
+  // if this is a plugin object set the name to the plugins name
+  if (name.name) {
+    name = name.name;
+  }
+
+  if (this.plugins[name] &#x26;&#x26; this.plugins[name].detach) {
+    this.plugins[name].detach.call(this);
+  }
+
+  delete this.plugins[name];
+  delete this.options[name];
+  delete this.initializers[name];
+
+  var init = this.initlist.indexOf(name);
+
+  if (init !== -1) {
+    this.initlist.splice(1, init);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// add the `file` store the the config
+app.config.use(&#x27;file&#x27;, { file: &#x27;path/to/config.json&#x27; });
+
+// or using an alternate syntax
+app.config.env().file({ file: &#x27;path/to/config.json&#x27; });
+
+// and removing stores
+app.config.<span class="apidocCodeKeywordSpan">remove</span>(&#x27;literal&#x27;);
+```
+
+### `app.log`
+
+`flatiron.app` will also load a [`log`](https://github.com/flatiron/broadway/blob/master/lib/broadway/plugins/log.js) plugin during
+ the init phase, which attaches a [winston container](https://github.com/flatiron/winston) to `app.log`. This logger is configured
+ by combining the `app.options.log` property with the configuration retrieved from `app.config.get(&#x27;log&#x27;)`.
+
+## Create An HTTP Server with `flatiron.plugins.http(options)`:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.App.super_.prototype.use" id="apidoc.element.flatiron.App.super_.prototype.use">
+        function <span class="apidocSignatureSpan">flatiron.App.super_.prototype.</span>use
+        <span class="apidocSignatureSpan">(plugin, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">use = function (plugin, options, callback) {
+  options = options || {};
+
+  if (typeof plugin === &#x27;undefined&#x27;) {
+    console.log(&#x27;Cannot load invalid plugin!&#x27;);
+    return callback &#x26;&#x26; callback(new Error(&#x27;Invalid plugin&#x27;));
+  }
+
+  var name = plugin.name,
+      self = this;
+
+  // If the plugin doesn&#x27;t have a name, use itself as an identifier for the plugins hash.
+  if (!name) {
+    name = common.uuid();
+  }
+
+  if (this.plugins[name]) {
+    return callback &#x26;&#x26; callback();
+  }
+
+  //
+  // Setup state on this instance for the specified plugin
+  //
+  this.plugins[name] = plugin;
+  this.options[name] = common.mixin({}, options, this.options[name] || {});
+
+  //
+  // Attach the specified plugin to this instance, extending
+  // the `App` with new functionality.
+  //
+  if (this.plugins[name].attach &#x26;&#x26; options.attach !== false) {
+    this.plugins[name].attach.call(this, options);
+  }
+
+  //
+  // Setup the initializer only if `options.init` is
+  // not false. This allows for some plugins to be lazy-loaded
+  //
+  if (options.init === false) {
+    return callback &#x26;&#x26; callback();
+  }
+
+  if (!this.initialized) {
+    this.initializers[name] = plugin.init || true;
+    this.initlist.push(name);
+    return callback &#x26;&#x26; callback();
+  }
+  else if (plugin.init) {
+    plugin.init.call(this, function (err) {
+      var args = err
+        ? [[&#x27;plugin&#x27;, name, &#x27;error&#x27;], err]
+        : [[&#x27;plugin&#x27;, name, &#x27;init&#x27;]];
+
+      self.emit.apply(self, args);
+      return callback &#x26;&#x26; (err ? callback(err) : callback());
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+# Example HTTP Server:
+
+```js
+var flatiron = require(&#x27;flatiron&#x27;),
+    app = flatiron.app;
+
+app.<span class="apidocCodeKeywordSpan">use</span>(flatiron.plugins.http);
+
+app.router.get(&#x27;/&#x27;, function () {
+  this.res.writeHead(200, { &#x27;Content-Type&#x27;: &#x27;text/plain&#x27; });
+  this.res.end(&#x27;Hello world!\n&#x27;);
+});
+
+app.start(8080);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.flatiron.App.super_.super_.prototype" id="apidoc.module.flatiron.App.super_.super_.prototype">module flatiron.App.super_.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.App.super_.super_.prototype.addListener" id="apidoc.element.flatiron.App.super_.super_.prototype.addListener">
+        function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>addListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addListener = function (type, listener) {
+
+  if (typeof type === &#x27;function&#x27;) {
+    this.onAny(type);
+    return this;
+  }
+
+  if (typeof listener !== &#x27;function&#x27;) {
+    throw new Error(&#x27;on only accepts instances of Function&#x27;);
+  }
+  this._events || init.call(this);
+
+  // To avoid recursion in the case that type == &#x22;newListeners&#x22;! Before
+  // adding it to the listeners, first emit &#x22;newListeners&#x22;.
+  this.emit(&#x27;newListener&#x27;, type, listener);
+
+  if(this.wildcard) {
+    growListenerTree.call(this, type, listener);
+    return this;
+  }
+
+  if (!this._events[type]) {
+    // Optimize the case of one listener. Don&#x27;t need the extra array object.
+    this._events[type] = listener;
+  }
+  else if(typeof this._events[type] === &#x27;function&#x27;) {
+    // Adding the second element, need to change to array.
+    this._events[type] = [this._events[type], listener];
+  }
+  else if (isArray(this._events[type])) {
+    // If we&#x27;ve already got an array, just append.
+    this._events[type].push(listener);
+
+    // Check for listener leak
+    if (!this._events[type].warned) {
+
+      var m = defaultMaxListeners;
+
+      if (typeof this._events.maxListeners !== &#x27;undefined&#x27;) {
+        m = this._events.maxListeners;
+      }
+
+      if (m &#x3e; 0 &#x26;&#x26; this._events[type].length &#x3e; m) {
+
+        this._events[type].warned = true;
+        console.error(&#x27;(node) warning: possible EventEmitter memory &#x27; +
+                      &#x27;leak detected. %d listeners added. &#x27; +
+                      &#x27;Use emitter.setMaxListeners() to increase limit.&#x27;,
+                      this._events[type].length);
+        console.trace();
+      }
+    }
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.App.super_.super_.prototype.emit" id="apidoc.element.flatiron.App.super_.super_.prototype.emit">
+        function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>emit
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">emit = function () {
+
+  this._events || init.call(this);
+
+  var type = arguments[0];
+
+  if (type === &#x27;newListener&#x27; &#x26;&#x26; !this.newListener) {
+    if (!this._events.newListener) { return false; }
+  }
+
+  // Loop through the *_all* functions and invoke them.
+  if (this._all) {
+    var l = arguments.length;
+    var args = new Array(l - 1);
+    for (var i = 1; i &#x3c; l; i++) args[i - 1] = arguments[i];
+    for (i = 0, l = this._all.length; i &#x3c; l; i++) {
+      this.event = type;
+      this._all[i].apply(this, args);
+    }
+  }
+
+  // If there is no &#x27;error&#x27; event listener then throw.
+  if (type === &#x27;error&#x27;) {
+
+    if (!this._all &#x26;&#x26;
+      !this._events.error &#x26;&#x26;
+      !(this.wildcard &#x26;&#x26; this.listenerTree.error)) {
+
+      if (arguments[1] instanceof Error) {
+        throw arguments[1]; // Unhandled &#x27;error&#x27; event
+      } else {
+        throw new Error(&#x22;Uncaught, unspecified &#x27;error&#x27; event.&#x22;);
+      }
+      return false;
+    }
+  }
+
+  var handler;
+
+  if(this.wildcard) {
+    handler = [];
+    var ns = typeof type === &#x27;string&#x27; ? type.split(this.delimiter) : type.slice();
+    searchListenerTree.call(this, handler, ns, this.listenerTree, 0);
+  }
+  else {
+    handler = this._events[type];
+  }
+
+  if (typeof handler === &#x27;function&#x27;) {
+    this.event = type;
+    if (arguments.length === 1) {
+      handler.call(this);
+    }
+    else if (arguments.length &#x3e; 1)
+      switch (arguments.length) {
+        case 2:
+          handler.call(this, arguments[1]);
+          break;
+        case 3:
+          handler.call(this, arguments[1], arguments[2]);
+          break;
+        // slower
+        default:
+          var l = arguments.length;
+          var args = new Array(l - 1);
+          for (var i = 1; i &#x3c; l; i++) args[i - 1] = arguments[i];
+          handler.apply(this, args);
+      }
+    return true;
+  }
+  else if (handler) {
+    var l = arguments.length;
+    var args = new Array(l - 1);
+    for (var i = 1; i &#x3c; l; i++) args[i - 1] = arguments[i];
+
+    var listeners = handler.slice();
+    for (var i = 0, l = listeners.length; i &#x3c; l; i++) {
+      this.event = type;
+      listeners[i].apply(this, args);
+    }
+    return (listeners.length &#x3e; 0) || !!this._all;
+  }
+  else {
+    return !!this._all;
+  }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.App.super_.super_.prototype.listeners" id="apidoc.element.flatiron.App.super_.super_.prototype.listeners">
+        function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>listeners
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listeners = function (type) {
+  if(this.wildcard) {
+    var handlers = [];
+    var ns = typeof type === &#x27;string&#x27; ? type.split(this.delimiter) : type.slice();
+    searchListenerTree.call(this, handlers, ns, this.listenerTree, 0);
+    return handlers;
+  }
+
+  this._events || init.call(this);
+
+  if (!this._events[type]) this._events[type] = [];
+  if (!isArray(this._events[type])) {
+    this._events[type] = [this._events[type]];
+  }
+  return this._events[type];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.App.super_.super_.prototype.listenersAny" id="apidoc.element.flatiron.App.super_.super_.prototype.listenersAny">
+        function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>listenersAny
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listenersAny = function () {
+
+  if(this._all) {
+    return this._all;
+  }
+  else {
+    return [];
+  }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.App.super_.super_.prototype.many" id="apidoc.element.flatiron.App.super_.super_.prototype.many">
+        function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>many
+        <span class="apidocSignatureSpan">(event, ttl, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">many = function (event, ttl, fn) {
+  var self = this;
+
+  if (typeof fn !== &#x27;function&#x27;) {
+    throw new Error(&#x27;many only accepts instances of Function&#x27;);
+  }
+
+  function listener() {
+    if (--ttl === 0) {
+      self.off(event, listener);
+    }
+    fn.apply(this, arguments);
+  }
+
+  listener._origin = fn;
+
+  this.on(event, listener);
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.App.super_.super_.prototype.off" id="apidoc.element.flatiron.App.super_.super_.prototype.off">
+        function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>off
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">off = function (type, listener) {
+  if (typeof listener !== &#x27;function&#x27;) {
+    throw new Error(&#x27;removeListener only takes instances of Function&#x27;);
+  }
+
+  var handlers,leafs=[];
+
+  if(this.wildcard) {
+    var ns = typeof type === &#x27;string&#x27; ? type.split(this.delimiter) : type.slice();
+    leafs = searchListenerTree.call(this, null, ns, this.listenerTree, 0);
+  }
+  else {
+    // does not use listeners(), so no side effect of creating _events[type]
+    if (!this._events[type]) return this;
+    handlers = this._events[type];
+    leafs.push({_listeners:handlers});
+  }
+
+  for (var iLeaf=0; iLeaf&#x3c;leafs.length; iLeaf++) {
+    var leaf = leafs[iLeaf];
+    handlers = leaf._listeners;
+    if (isArray(handlers)) {
+
+      var position = -1;
+
+      for (var i = 0, length = handlers.length; i &#x3c; length; i++) {
+        if (handlers[i] === listener ||
+          (handlers[i].listener &#x26;&#x26; handlers[i].listener === listener) ||
+          (handlers[i]._origin &#x26;&#x26; handlers[i]._origin === listener)) {
+          position = i;
+          break;
+        }
+      }
+
+      if (position &#x3c; 0) {
+        continue;
+      }
+
+      if(this.wildcard) {
+        leaf._listeners.splice(position, 1);
+      }
+      else {
+        this._events[type].splice(position, 1);
+      }
+
+      if (handlers.length === 0) {
+        if(this.wildcard) {
+          delete leaf._listeners;
+        }
+        else {
+          delete this._events[type];
+        }
+      }
+      return this;
+    }
+    else if (handlers === listener ||
+      (handlers.listener &#x26;&#x26; handlers.listener === listener) ||
+      (handlers._origin &#x26;&#x26; handlers._origin === listener)) {
+      if(this.wildcard) {
+        delete leaf._listeners;
+      }
+      else {
+        delete this._events[type];
+      }
+    }
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.App.super_.super_.prototype.offAny" id="apidoc.element.flatiron.App.super_.super_.prototype.offAny">
+        function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>offAny
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">offAny = function (fn) {
+  var i = 0, l = 0, fns;
+  if (fn &#x26;&#x26; this._all &#x26;&#x26; this._all.length &#x3e; 0) {
+    fns = this._all;
+    for(i = 0, l = fns.length; i &#x3c; l; i++) {
+      if(fn === fns[i]) {
+        fns.splice(i, 1);
+        return this;
+      }
+    }
+  } else {
+    this._all = [];
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.App.super_.super_.prototype.on" id="apidoc.element.flatiron.App.super_.super_.prototype.on">
+        function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>on
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">on = function (type, listener) {
+
+  if (typeof type === &#x27;function&#x27;) {
+    this.onAny(type);
+    return this;
+  }
+
+  if (typeof listener !== &#x27;function&#x27;) {
+    throw new Error(&#x27;on only accepts instances of Function&#x27;);
+  }
+  this._events || init.call(this);
+
+  // To avoid recursion in the case that type == &#x22;newListeners&#x22;! Before
+  // adding it to the listeners, first emit &#x22;newListeners&#x22;.
+  this.emit(&#x27;newListener&#x27;, type, listener);
+
+  if(this.wildcard) {
+    growListenerTree.call(this, type, listener);
+    return this;
+  }
+
+  if (!this._events[type]) {
+    // Optimize the case of one listener. Don&#x27;t need the extra array object.
+    this._events[type] = listener;
+  }
+  else if(typeof this._events[type] === &#x27;function&#x27;) {
+    // Adding the second element, need to change to array.
+    this._events[type] = [this._events[type], listener];
+  }
+  else if (isArray(this._events[type])) {
+    // If we&#x27;ve already got an array, just append.
+    this._events[type].push(listener);
+
+    // Check for listener leak
+    if (!this._events[type].warned) {
+
+      var m = defaultMaxListeners;
+
+      if (typeof this._events.maxListeners !== &#x27;undefined&#x27;) {
+        m = this._events.maxListeners;
+      }
+
+      if (m &#x3e; 0 &#x26;&#x26; this._events[type].length &#x3e; m) {
+
+        this._events[type].warned = true;
+        console.error(&#x27;(node) warning: possible EventEmitter memory &#x27; +
+                      &#x27;leak detected. %d listeners added. &#x27; +
+                      &#x27;Use emitter.setMaxListeners() to increase limit.&#x27;,
+                      this._events[type].length);
+        console.trace();
+      }
+    }
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.App.super_.super_.prototype.onAny" id="apidoc.element.flatiron.App.super_.super_.prototype.onAny">
+        function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>onAny
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onAny = function (fn) {
+
+  if (typeof fn !== &#x27;function&#x27;) {
+    throw new Error(&#x27;onAny only accepts instances of Function&#x27;);
+  }
+
+  if(!this._all) {
+    this._all = [];
+  }
+
+  // Add the function to the event listener collection.
+  this._all.push(fn);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.App.super_.super_.prototype.once" id="apidoc.element.flatiron.App.super_.super_.prototype.once">
+        function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>once
+        <span class="apidocSignatureSpan">(event, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">once = function (event, fn) {
+  this.many(event, 1, fn);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.App.super_.super_.prototype.removeAllListeners" id="apidoc.element.flatiron.App.super_.super_.prototype.removeAllListeners">
+        function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>removeAllListeners
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeAllListeners = function (type) {
+  if (arguments.length === 0) {
+    !this._events || init.call(this);
+    return this;
+  }
+
+  if(this.wildcard) {
+    var ns = typeof type === &#x27;string&#x27; ? type.split(this.delimiter) : type.slice();
+    var leafs = searchListenerTree.call(this, null, ns, this.listenerTree, 0);
+
+    for (var iLeaf=0; iLeaf&#x3c;leafs.length; iLeaf++) {
+      var leaf = leafs[iLeaf];
+      leaf._listeners = null;
+    }
+  }
+  else {
+    if (!this._events[type]) return this;
+    this._events[type] = null;
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.App.super_.super_.prototype.removeListener" id="apidoc.element.flatiron.App.super_.super_.prototype.removeListener">
+        function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>removeListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeListener = function (type, listener) {
+  if (typeof listener !== &#x27;function&#x27;) {
+    throw new Error(&#x27;removeListener only takes instances of Function&#x27;);
+  }
+
+  var handlers,leafs=[];
+
+  if(this.wildcard) {
+    var ns = typeof type === &#x27;string&#x27; ? type.split(this.delimiter) : type.slice();
+    leafs = searchListenerTree.call(this, null, ns, this.listenerTree, 0);
+  }
+  else {
+    // does not use listeners(), so no side effect of creating _events[type]
+    if (!this._events[type]) return this;
+    handlers = this._events[type];
+    leafs.push({_listeners:handlers});
+  }
+
+  for (var iLeaf=0; iLeaf&#x3c;leafs.length; iLeaf++) {
+    var leaf = leafs[iLeaf];
+    handlers = leaf._listeners;
+    if (isArray(handlers)) {
+
+      var position = -1;
+
+      for (var i = 0, length = handlers.length; i &#x3c; length; i++) {
+        if (handlers[i] === listener ||
+          (handlers[i].listener &#x26;&#x26; handlers[i].listener === listener) ||
+          (handlers[i]._origin &#x26;&#x26; handlers[i]._origin === listener)) {
+          position = i;
+          break;
+        }
+      }
+
+      if (position &#x3c; 0) {
+        continue;
+      }
+
+      if(this.wildcard) {
+        leaf._listeners.splice(position, 1);
+      }
+      else {
+        this._events[type].splice(position, 1);
+      }
+
+      if (handlers.length === 0) {
+        if(this.wildcard) {
+          delete leaf._listeners;
+        }
+        else {
+          delete this._events[type];
+        }
+      }
+      return this;
+    }
+    else if (handlers === listener ||
+      (handlers.listener &#x26;&#x26; handlers.listener === listener) ||
+      (handlers._origin &#x26;&#x26; handlers._origin === listener)) {
+      if(this.wildcard) {
+        delete leaf._listeners;
+      }
+      else {
+        delete this._events[type];
+      }
+    }
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.App.super_.super_.prototype.setMaxListeners" id="apidoc.element.flatiron.App.super_.super_.prototype.setMaxListeners">
+        function <span class="apidocSignatureSpan">flatiron.App.super_.super_.prototype.</span>setMaxListeners
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setMaxListeners = function (n) {
+  this._events || init.call(this);
+  this._events.maxListeners = n;
+  if (!this._conf) this._conf = {};
+  this._conf.maxListeners = n;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.flatiron.common" id="apidoc.module.flatiron.common">module flatiron.common</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common._errnoException" id="apidoc.element.flatiron.common._errnoException">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>_errnoException
+        <span class="apidocSignatureSpan">(err, syscall, original)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_errnoException = function (err, syscall, original) {
+  var errname = uv.errname(err);
+  var message = `${syscall} ${errname}`;
+  if (original)
+    message += &#x27; &#x27; + original;
+  var e = new Error(message);
+  e.code = errname;
+  e.errno = errname;
+  e.syscall = syscall;
+  return e;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common._exceptionWithHostPort" id="apidoc.element.flatiron.common._exceptionWithHostPort">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>_exceptionWithHostPort
+        <span class="apidocSignatureSpan">(err, syscall, address, port, additional)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_exceptionWithHostPort = function (err, syscall, address, port, additional) {
+  var details;
+  if (port &#x26;&#x26; port &#x3e; 0) {
+    details = `${address}:${port}`;
+  } else {
+    details = address;
+  }
+
+  if (additional) {
+    details += ` - Local (${additional})`;
+  }
+  var ex = exports._errnoException(err, syscall, details);
+  ex.address = address;
+  if (port) {
+    ex.port = port;
+  }
+  return ex;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common._extend" id="apidoc.element.flatiron.common._extend">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>_extend
+        <span class="apidocSignatureSpan">(target, source)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_extend = function (target, source) {
+  // Don&#x27;t do anything if source isn&#x27;t an object
+  if (source === null || typeof source !== &#x27;object&#x27;) return target;
+
+  var keys = Object.keys(source);
+  var i = keys.length;
+  while (i--) {
+    target[keys[i]] = source[keys[i]];
+  }
+  return target;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.camelToUnderscore" id="apidoc.element.flatiron.common.camelToUnderscore">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>camelToUnderscore
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">camelToUnderscore = function (obj) {
+  if (typeof obj !== &#x27;object&#x27; || obj === null) {
+    return obj;
+  }
+
+  if (Array.isArray(obj)) {
+    obj.forEach(utile.camelToUnderscore);
+    return obj;
+  }
+
+  Object.keys(obj).forEach(function (key) {
+    var k = utile.inflect.underscore(key);
+    if (k !== key) {
+      obj[k] = obj[key];
+      delete obj[key];
+      key = k;
+    }
+    utile.camelToUnderscore(obj[key]);
+  });
+
+  return obj;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.capitalize" id="apidoc.element.flatiron.common.capitalize">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>capitalize
+        <span class="apidocSignatureSpan">(lower_case_and_underscored_word, first_letter_in_uppercase)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">capitalize = function (lower_case_and_underscored_word, first_letter_in_uppercase) {
+  var result;
+  if (first_letter_in_uppercase == null) first_letter_in_uppercase = true;
+  result = util.string.gsub(lower_case_and_underscored_word, /\/(.?)/, function($) {
+    return &#x22;.&#x22; + (util.string.upcase($[1]));
+  });
+  result = util.string.gsub(result, /(?:_)(.)/, function($) {
+    return util.string.upcase($[1]);
+  });
+  if (first_letter_in_uppercase) {
+    return util.string.upcase(result);
+  } else {
+    return util.string.downcase(result);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.clone" id="apidoc.element.flatiron.common.clone">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>clone
+        <span class="apidocSignatureSpan">(object, filter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clone = function (object, filter) {
+  return Object.keys(object).reduce(filter ? function (obj, k) {
+    if (filter(k)) obj[k] = object[k];
+    return obj;
+  } : function (obj, k) {
+    obj[k] = object[k];
+    return obj;
+  }, {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.createPath" id="apidoc.element.flatiron.common.createPath">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>createPath
+        <span class="apidocSignatureSpan">(obj, path, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createPath = function (obj, path, value) {
+  var key, i;
+
+  for (i in path) {
+    key = path[i];
+    if (!obj[key]) {
+      obj[key] = ((+i + 1 === path.length) ? value : {});
+    }
+
+    obj = obj[key];
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.debug" id="apidoc.element.flatiron.common.debug">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>debug
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.debuglog" id="apidoc.element.flatiron.common.debuglog">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>debuglog
+        <span class="apidocSignatureSpan">(set)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">debuglog = function (set) {
+  if (debugEnviron === undefined)
+    debugEnviron = process.env.NODE_DEBUG || &#x27;&#x27;;
+  set = set.toUpperCase();
+  if (!debugs[set]) {
+    if (new RegExp(`\\b${set}\\b`, &#x27;i&#x27;).test(debugEnviron)) {
+      var pid = process.pid;
+      debugs[set] = function() {
+        var msg = exports.format.apply(exports, arguments);
+        console.error(&#x27;%s %d: %s&#x27;, set, pid, msg);
+      };
+    } else {
+      debugs[set] = function() {};
+    }
+  }
+  return debugs[set];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.deprecate" id="apidoc.element.flatiron.common.deprecate">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>deprecate
+        <span class="apidocSignatureSpan">(fn, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deprecate = function (fn, msg) {
+  // Allow for deprecating things in the process of starting up.
+  if (global.process === undefined) {
+    return function() {
+      return exports._deprecate(fn, msg).apply(this, arguments);
+    };
+  }
+
+  if (process.noDeprecation === true) {
+    return fn;
+  }
+
+  var warned = false;
+  function deprecated() {
+    warned = exports.printDeprecationMessage(msg, warned, deprecated);
+    if (new.target) {
+      return Reflect.construct(fn, arguments, new.target);
+    }
+    return fn.apply(this, arguments);
+  }
+
+  // The wrapper will keep the same prototype as fn to maintain prototype chain
+  Object.setPrototypeOf(deprecated, fn);
+  if (fn.prototype) {
+    // Setting this (rather than using Object.setPrototype, as above) ensures
+    // that calling the unwrapped constructor gives an instanceof the wrapped
+    // constructor.
+    deprecated.prototype = fn.prototype;
+  }
+
+  return deprecated;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.each" id="apidoc.element.flatiron.common.each">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>each
+        <span class="apidocSignatureSpan">(obj, iterator)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">each = function (obj, iterator) {
+  Object.keys(obj).forEach(function (key) {
+    iterator(obj[key], key, obj);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.error" id="apidoc.element.flatiron.common.error">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>error
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+app.commands.friendly = function (cb) {
+  cb(null);
+}
+
+app.start(function (err) {
+  if (err) {
+    app.log.<span class="apidocCodeKeywordSpan">error</span>(err.message || &#x27;You didn\&#x27;t call any commands!&#x27;);
+    app.log.warn(&#x27;NOT OK.&#x27;);
+    return process.exit(1);
+  }
+  app.log.info(&#x27;OK.&#x27;);
+});
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.escapeRegExp" id="apidoc.element.flatiron.common.escapeRegExp">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>escapeRegExp
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">escapeRegExp = function (str) {
+  return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, &#x22;\\$&#x26;&#x22;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.filter" id="apidoc.element.flatiron.common.filter">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>filter
+        <span class="apidocSignatureSpan">(obj, pred)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">filter = function (obj, pred) {
+  var copy;
+  if (Array.isArray(obj)) {
+    copy = [];
+    utile.each(obj, function (val, key) {
+      if (pred(val, key, obj)) {
+        copy.push(val);
+      }
+    });
+  }
+  else {
+    copy = {};
+    utile.each(obj, function (val, key) {
+      if (pred(val, key, obj)) {
+        copy[key] = val;
+      }
+    });
+  }
+  return copy;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.find" id="apidoc.element.flatiron.common.find">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>find
+        <span class="apidocSignatureSpan">(obj, pred)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">find = function (obj, pred) {
+  var value, key;
+
+  for (key in obj) {
+    value = obj[key];
+    if (pred(value, key)) {
+      return value;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.inherits" id="apidoc.element.flatiron.common.inherits">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>inherits
+        <span class="apidocSignatureSpan">(ctor, superCtor)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inherits = function (ctor, superCtor) {
+
+  if (ctor === undefined || ctor === null)
+    throw new TypeError(&#x27;The constructor to &#x22;inherits&#x22; must not be &#x27; +
+                        &#x27;null or undefined&#x27;);
+
+  if (superCtor === undefined || superCtor === null)
+    throw new TypeError(&#x27;The super constructor to &#x22;inherits&#x22; must not &#x27; +
+                        &#x27;be null or undefined&#x27;);
+
+  if (superCtor.prototype === undefined)
+    throw new TypeError(&#x27;The super constructor to &#x22;inherits&#x22; must &#x27; +
+                        &#x27;have a prototype&#x27;);
+
+  ctor.super_ = superCtor;
+  Object.setPrototypeOf(ctor.prototype, superCtor.prototype);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.inspect" id="apidoc.element.flatiron.common.inspect">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>inspect
+        <span class="apidocSignatureSpan">(obj, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function inspect(obj, opts) {
+  // default options
+  var ctx = {
+    seen: [],
+    stylize: stylizeNoColor
+  };
+  // legacy...
+  if (arguments[2] !== undefined) ctx.depth = arguments[2];
+  if (arguments[3] !== undefined) ctx.colors = arguments[3];
+  if (typeof opts === &#x27;boolean&#x27;) {
+    // legacy...
+    ctx.showHidden = opts;
+  }
+  // Set default and user-specified options
+  ctx = Object.assign({}, inspect.defaultOptions, ctx, opts);
+  if (ctx.colors) ctx.stylize = stylizeWithColor;
+  if (ctx.maxArrayLength === null) ctx.maxArrayLength = Infinity;
+  return formatValue(ctx, obj, ctx.depth);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.res.end(&#x27;Hello world!\n&#x27;);
+});
+
+// POST to /
+app.router.post(&#x27;/&#x27;, function () {
+this.res.writeHead(200, { &#x27;Content-Type&#x27;: &#x27;text/plain&#x27; });
+this.res.write(&#x27;Hey, you posted some cool data!\n&#x27;);
+this.res.end(util.<span class="apidocCodeKeywordSpan">inspect</span>(this.req.body, true, 2, true) + &#x27;\n&#x27;);
+});
+
+// Parameterized routes
+app.router.get(&#x27;/sandwich/:type&#x27;, function (type) {
+if (~[&#x27;bacon&#x27;, &#x27;burger&#x27;].indexOf(type)) {
+  this.res.writeHead(200, { &#x27;Content-Type&#x27;: &#x27;text/plain&#x27; });
+  this.res.end(&#x27;Serving &#x27; + type + &#x27; sandwich!\n&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.isArray" id="apidoc.element.flatiron.common.isArray">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>isArray
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isArray() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.isBoolean" id="apidoc.element.flatiron.common.isBoolean">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>isBoolean
+        <span class="apidocSignatureSpan">(arg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isBoolean(arg) {
+  return typeof arg === &#x27;boolean&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.isBuffer" id="apidoc.element.flatiron.common.isBuffer">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>isBuffer
+        <span class="apidocSignatureSpan">(b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isBuffer(b) {
+  return b instanceof Buffer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.isDate" id="apidoc.element.flatiron.common.isDate">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>isDate
+        <span class="apidocSignatureSpan">(d)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isDate(d) {
+  return binding.isDate(d);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.isError" id="apidoc.element.flatiron.common.isError">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>isError
+        <span class="apidocSignatureSpan">(e)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isError(e) {
+  return exports.objectToString(e) === &#x27;[object Error]&#x27; || e instanceof Error;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.isFunction" id="apidoc.element.flatiron.common.isFunction">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>isFunction
+        <span class="apidocSignatureSpan">(arg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isFunction(arg) {
+  return typeof arg === &#x27;function&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.isNull" id="apidoc.element.flatiron.common.isNull">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>isNull
+        <span class="apidocSignatureSpan">(arg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isNull(arg) {
+  return arg === null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.isNullOrUndefined" id="apidoc.element.flatiron.common.isNullOrUndefined">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>isNullOrUndefined
+        <span class="apidocSignatureSpan">(arg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isNullOrUndefined(arg) {
+  return arg === null || arg === undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.isNumber" id="apidoc.element.flatiron.common.isNumber">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>isNumber
+        <span class="apidocSignatureSpan">(arg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isNumber(arg) {
+  return typeof arg === &#x27;number&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.isObject" id="apidoc.element.flatiron.common.isObject">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>isObject
+        <span class="apidocSignatureSpan">(arg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isObject(arg) {
+  return arg !== null &#x26;&#x26; typeof arg === &#x27;object&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.isPrimitive" id="apidoc.element.flatiron.common.isPrimitive">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>isPrimitive
+        <span class="apidocSignatureSpan">(arg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isPrimitive(arg) {
+  return arg === null ||
+         typeof arg !== &#x27;object&#x27; &#x26;&#x26; typeof arg !== &#x27;function&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.isRegExp" id="apidoc.element.flatiron.common.isRegExp">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>isRegExp
+        <span class="apidocSignatureSpan">(re)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isRegExp(re) {
+  return binding.isRegExp(re);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.isString" id="apidoc.element.flatiron.common.isString">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>isString
+        <span class="apidocSignatureSpan">(arg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isString(arg) {
+  return typeof arg === &#x27;string&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.isSymbol" id="apidoc.element.flatiron.common.isSymbol">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>isSymbol
+        <span class="apidocSignatureSpan">(arg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isSymbol(arg) {
+  return typeof arg === &#x27;symbol&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.isUndefined" id="apidoc.element.flatiron.common.isUndefined">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>isUndefined
+        <span class="apidocSignatureSpan">(arg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isUndefined(arg) {
+  return arg === undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.log" id="apidoc.element.flatiron.common.log">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>log
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">log = function () {
+  console.log(&#x27;%s - %s&#x27;, timestamp(), exports.format.apply(exports, arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+app.use(hello, {
+  message: &#x22;Hi! How are you?&#x22;
+});
+
+// Will print, &#x22;Hi! How are you?&#x22;
+console.<span class="apidocCodeKeywordSpan">log</span>(app.hello);
+```
+
+Virtually all additional functionality in flatiron comes from broadway plugins, such as `flatiron.plugins.http` and `flatiron.plugins
+.cli`.
+
+### `app.config`
+
+`flatiron.app` comes with a [`config`](https://github.com/flatiron/broadway/blob/master/lib/broadway/plugins/config.js) plugin pre
+-loaded, which adds configuration management courtesy [nconf](https://github.com/flatiron/nconf). `app.config` has the same api
+as the `nconf` object.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.mixin" id="apidoc.element.flatiron.common.mixin">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>mixin
+        <span class="apidocSignatureSpan">(target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mixin = function (target) {
+  utile.rargs(arguments, 1).forEach(function (o) {
+    Object.getOwnPropertyNames(o).forEach(function(attr) {
+      var getter = Object.getOwnPropertyDescriptor(o, attr).get,
+          setter = Object.getOwnPropertyDescriptor(o, attr).set;
+
+      if (!getter &#x26;&#x26; !setter) {
+        target[attr] = o[attr];
+      }
+      else {
+        Object.defineProperty(target, attr, {
+          get: getter,
+          set: setter
+        });
+      }
+    });
+  });
+
+  return target;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.pad" id="apidoc.element.flatiron.common.pad">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>pad
+        <span class="apidocSignatureSpan">(str, len, chr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pad(str, len, chr) {
+  var s;
+  if (!chr) {
+    chr = &#x27; &#x27;;
+  }
+  str = str || &#x27;&#x27;;
+  s = str;
+  if (str.length &#x3c; len) {
+    for (var i = 0; i &#x3c; (len - str.length); i++) {
+      s += chr;
+    }
+  }
+  return s;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.path" id="apidoc.element.flatiron.common.path">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>path
+        <span class="apidocSignatureSpan">(obj, path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">path = function (obj, path) {
+  var key, i;
+
+  for (i in path) {
+    if (typeof obj === &#x27;undefined&#x27;) {
+      return undefined;
+    }
+
+    key = path[i];
+    obj = obj[key];
+  }
+
+  return obj;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.print" id="apidoc.element.flatiron.common.print">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>print
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.puts" id="apidoc.element.flatiron.common.puts">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>puts
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.randomString" id="apidoc.element.flatiron.common.randomString">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>randomString
+        <span class="apidocSignatureSpan">(length)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">randomString = function (length) {
+  var chars, rand, i, ret, mod, bits;
+
+  chars = &#x27;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-&#x27;;
+  ret = &#x27;&#x27;;
+  // standard 4
+  mod = 4;
+  // default is 16
+  bits = length * mod || 64;
+
+  // in v8, Math.random() yields 32 pseudo-random bits (in spidermonkey it gives 53)
+  while (bits &#x3e; 0) {
+    // 32-bit integer
+    rand = Math.floor(Math.random() * 0x100000000);
+    //we use the top bits
+    for (i = 26; i &#x3e; 0 &#x26;&#x26; bits &#x3e; 0; i -= mod, bits -= mod) {
+      ret += chars[0x3F &#x26; rand &#x3e;&#x3e;&#x3e; i];
+    }
+  }
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.rargs" id="apidoc.element.flatiron.common.rargs">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>rargs
+        <span class="apidocSignatureSpan">(_args, slice)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rargs = function (_args, slice) {
+  if (!slice) {
+    slice = 0;
+  }
+
+  var len = (_args || []).length,
+      args = new Array(len - slice),
+      i;
+
+  //
+  // Convert the raw `_args` to a proper Array.
+  //
+  for (i = slice; i &#x3c; len; i++) {
+    args[i - slice] = _args[i];
+  }
+
+  return args;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.requireDir" id="apidoc.element.flatiron.common.requireDir">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>requireDir
+        <span class="apidocSignatureSpan">(directory)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">requireDir = function (directory) {
+  var result = {},
+      files = fs.readdirSync(directory);
+
+  files.forEach(function (file) {
+    if (file.substr(-3) === &#x27;.js&#x27;) {
+      file = file.substr(0, file.length - 3);
+    }
+    result[file] = require(path.resolve(directory, file));
+  });
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.requireDirLazy" id="apidoc.element.flatiron.common.requireDirLazy">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>requireDirLazy
+        <span class="apidocSignatureSpan">(directory)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">requireDirLazy = function (directory) {
+  var result = {},
+      files = fs.readdirSync(directory);
+
+  files.forEach(function (file) {
+    if (file.substr(-3) === &#x27;.js&#x27;) {
+      file = file.substr(0, file.length - 3);
+    }
+    Object.defineProperty(result, file, {
+      get: function() {
+        return result[file] = require(path.resolve(directory, file));
+      }
+    });
+  });
+
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.templateUsage" id="apidoc.element.flatiron.common.templateUsage">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>templateUsage
+        <span class="apidocSignatureSpan">(app, commands)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">templateUsage = function (app, commands) {
+  if (!app.name) {
+    return commands;
+  }
+
+  function templateUsage(usage) {
+    return usage.map(function (line) {
+      return line.replace(/\&#x3c;app\&#x3e;/ig, app.name);
+    });
+  }
+
+  Object.keys(commands).forEach(function (command) {
+    if (command === &#x27;usage&#x27;) {
+      commands.usage = templateUsage(commands.usage);
+    }
+    else if (commands[command].usage) {
+      commands[command].usage = templateUsage(commands[command].usage);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.tryReaddirSync" id="apidoc.element.flatiron.common.tryReaddirSync">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>tryReaddirSync
+        <span class="apidocSignatureSpan">(dir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tryReaddirSync = function (dir) {
+  try { return fs.readdirSync(dir) }
+  catch (err) { return [] }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.underscoreToCamel" id="apidoc.element.flatiron.common.underscoreToCamel">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>underscoreToCamel
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">underscoreToCamel = function (obj) {
+  if (typeof obj !== &#x27;object&#x27; || obj === null) {
+    return obj;
+  }
+
+  if (Array.isArray(obj)) {
+    obj.forEach(utile.underscoreToCamel);
+    return obj;
+  }
+
+  Object.keys(obj).forEach(function (key) {
+    var k = utile.inflect.camelize(key, false);
+    if (k !== key) {
+      obj[k] = obj[key];
+      delete obj[key];
+      key = k;
+    }
+    utile.underscoreToCamel(obj[key]);
+  });
+
+  return obj;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.uuid" id="apidoc.element.flatiron.common.uuid">
+        function <span class="apidocSignatureSpan">flatiron.common.</span>uuid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uuid = function () {
+  return String(id++);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.flatiron.common.directories" id="apidoc.module.flatiron.common.directories">module flatiron.common.directories</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.directories.create" id="apidoc.element.flatiron.common.directories.create">
+        function <span class="apidocSignatureSpan">flatiron.common.directories.</span>create
+        <span class="apidocSignatureSpan">(dirs, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (dirs, callback) {
+  function createDir(dir, next) {
+    mkdirp(dir, 0755, function () {
+      next(null, dir);
+    });
+  }
+
+  if (!dirs) {
+    return callback();
+  }
+
+  async.mapSeries(Object.keys(dirs).map(function (key) {
+    return dirs[key]
+  }), createDir, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.directories.normalize" id="apidoc.element.flatiron.common.directories.normalize">
+        function <span class="apidocSignatureSpan">flatiron.common.directories.</span>normalize
+        <span class="apidocSignatureSpan">(keys, dirs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">normalize = function (keys, dirs) {
+  var normalized = {};
+
+  Object.keys(dirs).forEach(function (key) {
+    normalized[key] = dirs[key];
+    Object.keys(keys).forEach(function (constant) {
+      normalized[key] = normalized[key].replace(constant, keys[constant]);
+    });
+  });
+
+  return normalized;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.common.directories.remove" id="apidoc.element.flatiron.common.directories.remove">
+        function <span class="apidocSignatureSpan">flatiron.common.directories.</span>remove
+        <span class="apidocSignatureSpan">(dirs, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">remove = function (dirs, callback) {
+  function removeDir (dir, next) {
+    rimraf(dir, function () {
+      next(null, dir);
+    });
+  }
+
+  if (!dirs) {
+    return callback();
+  }
+
+  async.mapSeries(Object.keys(dirs).map(function (key) {
+    return dirs[key]
+  }), removeDir, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// add the `file` store the the config
+app.config.use(&#x27;file&#x27;, { file: &#x27;path/to/config.json&#x27; });
+
+// or using an alternate syntax
+app.config.env().file({ file: &#x27;path/to/config.json&#x27; });
+
+// and removing stores
+app.config.<span class="apidocCodeKeywordSpan">remove</span>(&#x27;literal&#x27;);
+```
+
+### `app.log`
+
+`flatiron.app` will also load a [`log`](https://github.com/flatiron/broadway/blob/master/lib/broadway/plugins/log.js) plugin during
+ the init phase, which attaches a [winston container](https://github.com/flatiron/winston) to `app.log`. This logger is configured
+ by combining the `app.options.log` property with the configuration retrieved from `app.config.get(&#x27;log&#x27;)`.
+
+## Create An HTTP Server with `flatiron.plugins.http(options)`:
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
