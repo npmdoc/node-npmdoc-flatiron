@@ -83,6 +83,12 @@
 
         <li>
 
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan"></span>flatiron</span>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">flatiron.</span>App.super_.prototype</span>
 
         </li>
@@ -794,6 +800,58 @@
 
     </ol></li>
 
+    <li class="apidocModuleLi"><a href="#apidoc.module.flatiron.flatiron">module flatiron.flatiron</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.flatiron.App">
+            function <span class="apidocSignatureSpan">flatiron.flatiron.</span>App
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.flatiron.flatiron.createApp">
+            function <span class="apidocSignatureSpan">flatiron.flatiron.</span>createApp
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">flatiron.flatiron.</span>common</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">flatiron.flatiron.</span>constants</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">flatiron.flatiron.</span>formats</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">flatiron.flatiron.</span>plugins</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">flatiron.flatiron.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
 </ol></div>
 
 <div class="apidocSectionDiv">
@@ -810,7 +868,17 @@
     <li>description and source-code<pre class="apidocCodePre">App = function (options) {
   broadway.App.call(this, options);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+//
+// ### function createApp (options)
+// #### @options {Object} Options for the application to create
+// Creates a new instance of `flatiron.App` with the
+// specified `options`.
+//
+flatiron.createApp = function (options) {
+  return new flatiron.<span class="apidocCodeKeywordSpan">App</span>(options);
+};
+...</pre></li>
     </ul>
 
 
@@ -870,8 +938,26 @@
     <li>description and source-code<pre class="apidocCodePre">createApp = function (options) {
   return new flatiron.App(options);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+configurable: false,
+
+//
+// ### getter @app {flatiron.App}
+// Gets the default top-level Application for `flatiron`
+//
+get: function() {
+  return _app = _app || flatiron.<span class="apidocCodeKeywordSpan">createApp</span>();
+},
+
+//
+// #### setter @app {flatiron.App}
+// Options for the application to create or the application to set
+//
+set: function(value) {
+...</pre></li>
     </ul>
+
+
 
 
 
@@ -906,7 +992,17 @@
     <li>description and source-code<pre class="apidocCodePre">App = function (options) {
   broadway.App.call(this, options);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+//
+// ### function createApp (options)
+// #### @options {Object} Options for the application to create
+// Creates a new instance of `flatiron.App` with the
+// specified `options`.
+//
+flatiron.createApp = function (options) {
+  return new flatiron.<span class="apidocCodeKeywordSpan">App</span>(options);
+};
+...</pre></li>
     </ul>
 
 
@@ -2591,7 +2687,23 @@ as the `nconf` object.
 
   return target;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+flatiron.version   = require('../package.json').version;
+
+//
+// ### Expose core `flatiron` plugins
+// Hoist those up from `broadway` and define each of
+// the `flatiron` plugins as a lazy loaded `require` statement
+//
+flatiron.plugins = broadway.common.<span class="apidocCodeKeywordSpan">mixin</span>(
+  {},
+  broadway.plugins,
+  broadway.common.requireDirLazy(path.join(__dirname, 'flatiron', 'plugins'))
+);
+
+
+Object.defineProperty(flatiron, 'app', {
+...</pre></li>
     </ul>
 
 
@@ -2798,7 +2910,24 @@ as the `nconf` object.
 
   return result;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// ### Expose core `flatiron` plugins
+// Hoist those up from `broadway` and define each of
+// the `flatiron` plugins as a lazy loaded `require` statement
+//
+flatiron.plugins = broadway.common.mixin(
+{},
+broadway.plugins,
+broadway.common.<span class="apidocCodeKeywordSpan">requireDirLazy</span>(path.join(__dirname, 'flatiron', 'plugins
+'))
+);
+
+
+Object.defineProperty(flatiron, 'app', {
+
+// Don't allow another `.defineProperty` on 'app'
+configurable: false,
+...</pre></li>
     </ul>
 
 
@@ -3000,6 +3129,77 @@ app.config.<span class="apidocCodeKeywordSpan">remove</span>('literal');
 ## Create An HTTP Server with `flatiron.plugins.http(options)`:
 ...</pre></li>
     </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.flatiron.flatiron" id="apidoc.module.flatiron.flatiron">module flatiron.flatiron</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.flatiron.App" id="apidoc.element.flatiron.flatiron.App">
+        function <span class="apidocSignatureSpan">flatiron.flatiron.</span>App
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">App = function (options) {
+  broadway.App.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+//
+// ### function createApp (options)
+// #### @options {Object} Options for the application to create
+// Creates a new instance of `flatiron.App` with the
+// specified `options`.
+//
+flatiron.createApp = function (options) {
+  return new flatiron.<span class="apidocCodeKeywordSpan">App</span>(options);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.flatiron.flatiron.createApp" id="apidoc.element.flatiron.flatiron.createApp">
+        function <span class="apidocSignatureSpan">flatiron.flatiron.</span>createApp
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createApp = function (options) {
+  return new flatiron.App(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+configurable: false,
+
+//
+// ### getter @app {flatiron.App}
+// Gets the default top-level Application for `flatiron`
+//
+get: function() {
+  return _app = _app || flatiron.<span class="apidocCodeKeywordSpan">createApp</span>();
+},
+
+//
+// #### setter @app {flatiron.App}
+// Options for the application to create or the application to set
+//
+set: function(value) {
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
 
 
 </div>
