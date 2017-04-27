@@ -90,12 +90,6 @@
 
         <li>
 
-            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan"></span>flatiron</span>
-
-        </li>
-
-        <li>
-
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">flatiron.</span>App.super_.prototype</span>
 
         </li>
@@ -807,58 +801,6 @@
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.flatiron.flatiron">module flatiron.flatiron</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.flatiron.flatiron.App">
-            function <span class="apidocSignatureSpan">flatiron.flatiron.</span>App
-            <span class="apidocSignatureSpan">(options)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.flatiron.flatiron.createApp">
-            function <span class="apidocSignatureSpan">flatiron.flatiron.</span>createApp
-            <span class="apidocSignatureSpan">(options)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">flatiron.flatiron.</span>common</span>
-
-        </li>
-
-        <li>
-
-            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">flatiron.flatiron.</span>constants</span>
-
-        </li>
-
-        <li>
-
-            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">flatiron.flatiron.</span>formats</span>
-
-        </li>
-
-        <li>
-
-            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">flatiron.flatiron.</span>plugins</span>
-
-        </li>
-
-        <li>
-
-            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">flatiron.flatiron.</span>version</span>
-
-        </li>
-
-    </ol></li>
-
 </ol></div>
 
 <div class="apidocSectionDiv">
@@ -963,8 +905,6 @@ get: function() {
 set: function(value) {
 ...</pre></li>
     </ul>
-
-
 
 
 
@@ -1156,7 +1096,23 @@ flatiron.createApp = function (options) {
   //
   this.bootstrapper.init(this, initPlugins);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+&#x22;should extend the app correctly&#x22;: function (app) {
+  assert.isObject(app.resources);
+  assert.isFunction(app.resources.Creature);
+  assert.isFunction(app.define);
+},
+&#x22;when initialized&#x22;: {
+  topic: function () {
+    app.<span class="apidocCodeKeywordSpan">init</span>(this.callback);
+  },
+  &#x22;it should use the correct engine&#x22;: function () {
+    assert.equal(app.resources.Creature.engine, resourceful.engines.Memory);
+  },
+  &#x22;it should load the database config option&#x22;: function () {
+    var resourceful = app.config.get(&#x27;resourceful&#x27;);
+    var database = app.config.get(&#x27;database&#x27;);
+...</pre></li>
     </ul>
 
 
@@ -1494,7 +1450,18 @@ app.start(8080);
   }
 
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+&#x3c;script src=&#x22;/socket.io/socket.io.js&#x22;&#x3e;&#x3c;/script&#x3e;
+&#x3c;script&#x3e;
+  var socket = io.connect(&#x27;http://localhost&#x27;);
+  socket.on(&#x27;news&#x27;, function (data) {
+    console.log(data);
+    socket.<span class="apidocCodeKeywordSpan">emit</span>(&#x27;my other event&#x27;, { my: &#x27;data&#x27; });
+  });
+&#x3c;/script&#x3e;
+...</pre></li>
     </ul>
 
 
@@ -1751,7 +1718,20 @@ app.start(8080);
   }
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+
+&#x3c;script src=&#x22;/socket.io/socket.io.js&#x22;&#x3e;&#x3c;/script&#x3e;
+&#x3c;script&#x3e;
+  var socket = io.connect(&#x27;http://localhost&#x27;);
+  socket.<span class="apidocCodeKeywordSpan">on</span>(&#x27;news&#x27;, function (data) {
+    console.log(data);
+    socket.emit(&#x27;my other event&#x27;, { my: &#x27;data&#x27; });
+  });
+&#x3c;/script&#x3e;
+...</pre></li>
     </ul>
 
 
@@ -2071,7 +2051,22 @@ app.start(8080);
     return util.string.downcase(result);
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // If no resources were found in the path, warn, but don&#x27;t error
+  //
+  console.warn(&#x27;no resources found at: &#x27; + app._resourceDir);
+}
+
+files.forEach(function (file) {
+  file = file.replace(&#x27;.js&#x27;, &#x27;&#x27;);
+  app.resources.__defineGetter__(common.<span class="apidocCodeKeywordSpan">capitalize</span>(file), function () {
+    delete app.resources[common.capitalize(file)];
+    return app.resources[common.capitalize(file)] = require(
+      path.resolve(app._resourceDir, file)
+    );
+  });
+});
+...</pre></li>
     </ul>
 
 
@@ -2306,7 +2301,23 @@ app.start(function (err) {
   }
   return copy;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  function showUsage(target) {
+target = Array.isArray(target) ? target : target.split(&#x27;\n&#x27;);
+target.forEach(function (line) {
+  app.log.help(line);
+});
+
+var lines = app.showOptions().split(&#x27;\n&#x27;).<span class="apidocCodeKeywordSpan">filter</span>(Boolean);
+
+if (lines.length) {
+  app.log.help(&#x27;&#x27;);
+  lines.forEach(function (line) {
+    app.log.help(line);
+  });
+}
+...</pre></li>
     </ul>
 
 
@@ -2357,7 +2368,16 @@ app.start(function (err) {
   ctor.super_ = superCtor;
   Object.setPrototypeOf(ctor.prototype, superCtor.prototype);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var App = exports.App = function (options) {
+  broadway.App.call(this, options);
+};
+
+//
+// Inherit from `broadway.App`.
+//
+util.<span class="apidocCodeKeywordSpan">inherits</span>(App, broadway.App);
+...</pre></li>
     </ul>
 
 
@@ -2417,7 +2437,23 @@ if (~[&#x27;bacon&#x27;, &#x27;burger&#x27;].indexOf(type)) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function isArray() { [native code] }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Configures the `app.commands` object which is lazy-loaded from disk
+// along with some default logic for: `help` and `alias`.
+//
+exports.commands = function (options) {
+  var app = this;
+
+  function showUsage(target) {
+target = Array.<span class="apidocCodeKeywordSpan">isArray</span>(target) ? target : target.split(&#x27;\n&#x27;);
+target.forEach(function (line) {
+  app.log.help(line);
+});
+
+var lines = app.showOptions().split(&#x27;\n&#x27;).filter(Boolean);
+
+if (lines.length) {
+...</pre></li>
     </ul>
 
 
@@ -2492,7 +2528,23 @@ if (~[&#x27;bacon&#x27;, &#x27;burger&#x27;].indexOf(type)) {
     <li>description and source-code<pre class="apidocCodePre">function isFunction(arg) {
   return typeof arg === &#x27;function&#x27;;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+app.config.set(&#x27;database&#x27;, { uri: &#x27;http://localhost:5984/test&#x27; });
+
+vows.describe(&#x27;flatiron/plugins/resourceful&#x27;).addBatch({
+&#x22;A flatiron app using `flatiron.plugins.resourceful&#x22;: {
+  topic: app,
+  &#x22;should extend the app correctly&#x22;: function (app) {
+    assert.isObject(app.resources);
+    assert.<span class="apidocCodeKeywordSpan">isFunction</span>(app.resources.Creature);
+    assert.isFunction(app.define);
+  },
+  &#x22;when initialized&#x22;: {
+    topic: function () {
+      app.init(this.callback);
+    },
+    &#x22;it should use the correct engine&#x22;: function () {
+...</pre></li>
     </ul>
 
 
@@ -2507,7 +2559,23 @@ if (~[&#x27;bacon&#x27;, &#x27;burger&#x27;].indexOf(type)) {
     <li>description and source-code<pre class="apidocCodePre">function isNull(arg) {
   return arg === null;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  app.start(8080, this.callback)
+},
+&#x22;a GET to /headers&#x22;: {
+  topic: function () {
+    request(&#x27;http://localhost:8080/headers&#x27;, this.callback);
+  },
+  &#x22;should respond with JSON headers&#x22;: function (err, res, body) {
+    assert.<span class="apidocCodeKeywordSpan">isNull</span>(err);
+    assert.equal(res.statusCode, 200);
+    assert.isObject(JSON.parse(body));
+  }
+},
+&#x22;a GET to /style.css&#x22;: {
+  topic: function () {
+    request(&#x27;http://localhost:8080/style.css&#x27;, this.callback);
+...</pre></li>
     </ul>
 
 
@@ -2552,7 +2620,23 @@ if (~[&#x27;bacon&#x27;, &#x27;burger&#x27;].indexOf(type)) {
     <li>description and source-code<pre class="apidocCodePre">function isObject(arg) {
   return arg !== null &#x26;&#x26; typeof arg === &#x27;object&#x27;;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var app = require(&#x27;../../examples/resourceful-app/app&#x27;);
+app.config.set(&#x27;database&#x27;, { uri: &#x27;http://localhost:5984/test&#x27; });
+
+vows.describe(&#x27;flatiron/plugins/resourceful&#x27;).addBatch({
+&#x22;A flatiron app using `flatiron.plugins.resourceful&#x22;: {
+  topic: app,
+  &#x22;should extend the app correctly&#x22;: function (app) {
+    assert.<span class="apidocCodeKeywordSpan">isObject</span>(app.resources);
+    assert.isFunction(app.resources.Creature);
+    assert.isFunction(app.define);
+  },
+  &#x22;when initialized&#x22;: {
+    topic: function () {
+      app.init(this.callback);
+    },
+...</pre></li>
     </ul>
 
 
@@ -2598,7 +2682,23 @@ if (~[&#x27;bacon&#x27;, &#x27;burger&#x27;].indexOf(type)) {
     <li>description and source-code<pre class="apidocCodePre">function isString(arg) {
   return typeof arg === &#x27;string&#x27;;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var appDir = path.join(__dirname, &#x27;..&#x27;, &#x27;..&#x27;, &#x27;examples&#x27;, &#x27;static-app&#x27;),
+  app = require(path.join(appDir, &#x27;app&#x27;));
+
+vows.describe(&#x27;flatiron/plugins/static&#x27;).addBatch({
+&#x22;A flatiron app using `flatiron.plugins.static&#x22;: {
+  topic: app,
+  &#x22;should extend the app correctly&#x22;: function (app) {
+    assert.<span class="apidocCodeKeywordSpan">isString</span>(app._staticDir);
+    assert.isFunction(app.static);
+    assert.isFunction(app.http.before[0]);
+  },
+  &#x22;when the application is running&#x22;: {
+    topic: function () {
+      app.start(8080, this.callback)
+    },
+...</pre></li>
     </ul>
 
 
@@ -2982,7 +3082,23 @@ configurable: false,
   try { return fs.readdirSync(dir) }
   catch (err) { return [] }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  //
+  // If an invalid path has been provided, don&#x27;t attempt to load it
+  //
+  console.error(&#x27;invalid resource path: &#x27; + app._resourceDir);
+  return;
+}
+
+var files = common.<span class="apidocCodeKeywordSpan">tryReaddirSync</span>(app._resourceDir);
+
+if (files.length === 0) {
+  //
+  // If no resources were found in the path, warn, but don&#x27;t error
+  //
+  console.warn(&#x27;no resources found at: &#x27; + app._resourceDir);
+}
+...</pre></li>
     </ul>
 
 
@@ -3065,7 +3181,23 @@ configurable: false,
     return dirs[key]
   }), createDir, callback);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    JSON.parse(fs.readFileSync(path.join(scaffold, &#x27;directories.json&#x27;), &#x27;utf8&#x27;))
+  );
+
+  Object.keys(dirs).forEach(function (name) {
+    app.log.info(&#x27;Creating directory &#x27; + name.grey);
+  });
+
+  common.directories.<span class="apidocCodeKeywordSpan">create</span>(dirs, next);
+}
+
+//
+// Creates files specified in `/scaffolds/:type/files.json`.
+//
+function createFiles(next) {
+  var files = common.directories.normalize(
+...</pre></li>
     </ul>
 
 
@@ -3089,7 +3221,23 @@ configurable: false,
 
   return normalized;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+app.prompt.addProperties(info, fields, next);
+  }
+
+  //
+  // Creates directories specified in `/scaffolds/:type/directories.json`.
+  //
+  function createDirs(next) {
+var dirs = common.directories.<span class="apidocCodeKeywordSpan">normalize</span>(
+  common.mixin({}, flatiron.constants.DIRECTORIES, { &#x27;#ROOT&#x27;: root }),
+  JSON.parse(fs.readFileSync(path.join(scaffold, &#x27;directories.json&#x27;), &#x27;utf8&#x27;))
+);
+
+Object.keys(dirs).forEach(function (name) {
+  app.log.info(&#x27;Creating directory &#x27; + name.grey);
+});
+...</pre></li>
     </ul>
 
 
@@ -3136,77 +3284,6 @@ app.config.<span class="apidocCodeKeywordSpan">remove</span>(&#x27;literal&#x27;
 ## Create An HTTP Server with `flatiron.plugins.http(options)`:
 ...</pre></li>
     </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.flatiron.flatiron" id="apidoc.module.flatiron.flatiron">module flatiron.flatiron</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.flatiron.flatiron.App" id="apidoc.element.flatiron.flatiron.App">
-        function <span class="apidocSignatureSpan">flatiron.flatiron.</span>App
-        <span class="apidocSignatureSpan">(options)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">App = function (options) {
-  broadway.App.call(this, options);
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-//
-// ### function createApp (options)
-// #### @options {Object} Options for the application to create
-// Creates a new instance of `flatiron.App` with the
-// specified `options`.
-//
-flatiron.createApp = function (options) {
-  return new flatiron.<span class="apidocCodeKeywordSpan">App</span>(options);
-};
-...</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.flatiron.flatiron.createApp" id="apidoc.element.flatiron.flatiron.createApp">
-        function <span class="apidocSignatureSpan">flatiron.flatiron.</span>createApp
-        <span class="apidocSignatureSpan">(options)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">createApp = function (options) {
-  return new flatiron.App(options);
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-configurable: false,
-
-//
-// ### getter @app {flatiron.App}
-// Gets the default top-level Application for `flatiron`
-//
-get: function() {
-  return _app = _app || flatiron.<span class="apidocCodeKeywordSpan">createApp</span>();
-},
-
-//
-// #### setter @app {flatiron.App}
-// Options for the application to create or the application to set
-//
-set: function(value) {
-...</pre></li>
-    </ul>
-
-
-
-
-
-
-
-
-
-
 
 
 </div>
