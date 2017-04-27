@@ -1,6 +1,6 @@
 # npmdoc-flatiron
 
-#### api documentation for  [flatiron (v0.4.3)](https://github.com/flatiron/flatiron)  [![npm package](https://img.shields.io/npm/v/npmdoc-flatiron.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-flatiron) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-flatiron.svg)](https://travis-ci.org/npmdoc/node-npmdoc-flatiron)
+#### basic api documentation for  [flatiron (v0.4.3)](https://github.com/flatiron/flatiron)  [![npm package](https://img.shields.io/npm/v/npmdoc-flatiron.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-flatiron) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-flatiron.svg)](https://travis-ci.org/npmdoc/node-npmdoc-flatiron)
 
 #### An elegant blend of convention and configuration for building apps in Node.js and the browser
 
